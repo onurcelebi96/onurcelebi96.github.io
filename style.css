@@ -1,0 +1,10 @@
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#0b0d10;color:#e6e9ef}
+a{color:#9bb4ff;text-decoration:none}
+.wrap{max-width:950px;margin:0 auto;padding:20px}
+header h1{font-size:clamp(28px,5vw,42px);margin:10px 0}
+.tag{opacity:.85;margin:0 0 10px}
+.nav a{margin-right:14px;opacity:.9}
+.card{background:#12161c;border:1px solid #202431;border-radius:14px;padding:16px;margin:12px 0}
+h2{margin:6px 0 10px}
+.foot{opacity:.7;text-align:center;padding:24px 20px}

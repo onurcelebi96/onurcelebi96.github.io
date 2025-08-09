@@ -1,6 +1,51 @@
-<!doctype html><html lang="en"><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Onur Çelebi — Coming Soon</title>
-<body style="font:16px/1.4 system-ui;padding:40px;max-width:680px;margin:auto">
-<h1>Site yakında yayında</h1><p>Bu sayfa Firebase Hosting Spark ile çalışıyor.</p>
-</body></html>
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Onur Çelebi — Economist & AI</title>
+  <meta name="description" content="Onur Çelebi | Economist • AI & Econometrics • Ankara University PhD">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="wrap">
+    <h1>Onur Çelebi</h1>
+    <p class="tag">Economist · AI & Econometrics · PhD (Ankara University)</p>
+    <nav class="nav">
+      <a href="#about">Hakkımda</a>
+      <a href="#work">Çalışmalar</a>
+      <a href="#contact">İletişim</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="about" class="card">
+      <h2>Hakkımda</h2>
+      <p>Bu site GitHub Pages üzerinde ücretsiz barındırılıyor. Yakında daha fazla içerik eklenecek.</p>
+    </section>
+
+    <section id="work" class="card">
+      <h2>Seçili Çalışmalar</h2>
+      <ul>
+        <li>AI & enerji piyasaları — panel FE / DiD / DoubleML</li>
+        <li>ENTRA — göçmen işgücü entegrasyonu (Stata/Python)</li>
+        <li>Hidrojen üretimi için MCDM</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>İletişim</h2>
+      <p>E-posta: <a href="mailto:celebionur@protonmail.ch">celebionur@protonmail.ch</a></p>
+      <p>X: <a href="https://x.com/onr_clb" target="_blank">@onr_clb</a></p>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <small>© <span id="y"></span> Onur Çelebi</small>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

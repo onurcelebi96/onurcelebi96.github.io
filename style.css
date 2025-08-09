@@ -1,181 +1,126 @@
-/* ---------- Tokens (lightened dark + Gemini-like gradient) ---------- */
-:root{
-  --bg:#0e1117;
-  --panel:#171b23;
-  --panel-2:#141a22;
-  --border:#2a3140;
-  --text:#eef3fb;
-  --muted:#b5bbca;
-
-  --brand-cyan:#8fe3ff;    /* pastel cyan */
-  --brand-mid:#a6b8ff;     /* soft blue */
-  --brand-violet:#c39bff;  /* lavender */
-
-  --shadow:0 12px 32px rgba(0,0,0,.38);
-  --radius:16px;
-  --radius-sm:12px;
-  --maxw:1040px;
-  --trans:180ms ease;
+/* Genel renk paleti (açık tonlu koyu tema) */
+:root {
+  --bg-color: #1d1f24; /* Önceki çok koyuydu (#121212), biraz açtık */
+  --card-bg: #242730;  /* Kartların rengi hafif daha açık */
+  --text-color: #f5f5f5;
+  --muted-text: #b5b8c3;
+  --accent-color: #4db5ff;
+  --tag-bg: #333745;
 }
 
-/* ---------- Base ---------- */
-*{box-sizing:border-box}
-html,body{margin:0}
-html{scroll-behavior:smooth}
-body{
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: clamp(15.5px, 1.0vw, 17px);   /* bir tık küçültüldü */
-  line-height: 1.68;
-  letter-spacing: .14px;
-  background: var(--bg);
-  color: var(--text);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-img{max-width:100%;display:block}
-a{color:var(--brand-cyan);text-decoration:none;transition:color var(--trans), opacity var(--trans)}
-a:hover{color:var(--brand-violet)}
-.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-
-h1,h2,h3{
-  margin:0 0 .55rem;
-  line-height:1.2;
-  letter-spacing:-.01em;
-  color:#f7f9ff;
-  font-family:"Space Grotesk", Inter, sans-serif;
-}
-h1{font-weight:700}
-h2{font-weight:700}
-h3{font-weight:600}
-p{margin:.5rem 0 1.1rem}
-
-/* ---------- Nav ---------- */
-.nav{
-  position:sticky;top:0;z-index:20;
-  backdrop-filter:saturate(140%) blur(10px);
-  background:rgba(14,17,23,.72);
-  border-bottom:1px solid var(--border);
-  box-shadow:0 6px 20px rgba(0,0,0,.35);
-}
-.nav-inner{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}
-
-/* Brand — Gemini-like gradient title */
-.brand a{
-  display:inline-block;
-  font-family:"Space Grotesk", Inter, sans-serif;
-  font-weight:800;
-  font-size:clamp(26px,2.4vw,34px);  /* hafif küçültüldü */
-  line-height:1;
-  letter-spacing:.2px;
-  background:linear-gradient(90deg,var(--brand-cyan) 0%, var(--brand-mid) 48%, var(--brand-violet) 100%);
-  -webkit-background-clip:text; background-clip:text; color:transparent;
-  text-shadow:0 0 18px rgba(143,227,255,.18), 0 0 24px rgba(195,155,255,.10);
-  padding:4px 8px; border-radius:10px;
-  transition:transform var(--trans), filter var(--trans), opacity var(--trans);
-}
-.brand a:hover{transform:translateY(-1px); filter:saturate(115%); opacity:.97}
-
-.nav a{margin-left:18px;color:#e5e9f3;opacity:.9;font-weight:500}
-.nav a:hover{opacity:1}
-.nav a.active{position:relative;opacity:1 !important;color:#fff}
-.nav a.active::after{
-  content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;
-  background:linear-gradient(90deg,var(--brand-cyan),var(--brand-violet));
+/* Reset ve temel stiller */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
-/* ---------- Hero ---------- */
-.hero{
-  padding:78px 0 32px; /* biraz sıkılaştı */
-  background:
-    radial-gradient(1100px 420px at 14% -12%, rgba(143,227,255,.18), transparent 58%),
-    radial-gradient(1100px 420px at 86% -12%, rgba(195,155,255,.16), transparent 58%);
+a {
+  color: var(--accent-color);
+  text-decoration: none;
 }
-.hero h1{
-  margin-bottom:6px;
-  font-size: clamp(26px, 3.0vw, 40px); /* başlık küçültüldü */
-}
-.subtitle{                 /* ikinci satır için (Scientist & PhD...) */
-  margin-top:-2px;
-  font-size: clamp(14px, 1.2vw, 18px);
-  font-weight:500;
-  color: var(--muted);
-}
-.lead{
-  color:var(--muted);
-  max-width:700px;
-  font-size:clamp(15px,1.0vw,17px);
+a:hover {
+  opacity: 0.8;
 }
 
-/* ---------- Cards & Grid ---------- */
-.card{
-  background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:22px; margin:18px 0;
-  transition:transform var(--trans), box-shadow var(--trans), border-color var(--trans);
-}
-.card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,.42);border-color:#333b51}
-
-.grid{
-  display:grid; gap:18px; margin-top:8px;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* ---------- Tags ---------- */
-.tags span{
-  display:inline-block; margin:4px 6px 0 0; padding:6px 12px; border-radius:999px;
-  font-size:.82rem; font-weight:600; color:#0c1322;
-  background:linear-gradient(90deg,#a5f3fc,#d8b4fe);
-  border:1px solid rgba(255,255,255,.25);
+/* Navbar */
+.nav {
+  background-color: var(--card-bg);
+  padding: 1rem 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+.nav a.active {
+  border-bottom: 2px solid var(--accent-color);
 }
 
-/* ---------- Buttons ---------- */
-.btn{
-  display:inline-block; padding:10px 16px; border-radius:12px;
-  border:1px solid var(--border); background:var(--panel); color:var(--text);
-  box-shadow:var(--shadow); font-weight:650; font-size:.93rem; /* 0.95 -> 0.93 */
-  transition:transform var(--trans), opacity var(--trans), box-shadow var(--trans);
+/* Hero */
+.hero {
+  padding: 3rem 0;
 }
-.btn:hover{transform:translateY(-1px);opacity:.96}
-.btn.primary{border:none;color:#0e1117;background:linear-gradient(90deg,var(--brand-cyan),var(--brand-violet))}
-.btn:active{transform:translateY(0)}
-
-/* ---------- Footer ---------- */
-.footer{border-top:1px solid var(--border);margin-top:28px;color:var(--muted)}
-.footer .container{padding:24px 20px;text-align:center;font-size:.93rem}
-
-/* ---------- Anchor comfort ---------- */
-#contact{scroll-margin-top:84px}
-
-/* ---------- Accessibility ---------- */
-:focus{outline:none}
-:focus-visible{outline:2px solid var(--brand-cyan);outline-offset:3px;border-radius:8px}
-
-/* ---------- Responsive tweaks ---------- */
-@media (max-width:860px){
-  .nav a{margin-left:14px}
-  .hero{padding:64px 0 24px}
+.hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
 }
-@media (max-width:520px){
-  .btn{width:100%;text-align:center;margin:8px 0}
-  .container{padding:0 16px}
+.lead {
+  font-size: 1.1rem;
+  color: var(--muted-text);
 }
 
-/* === Fine typography balance === */
-:root{
-  --h1-max:40px;  /* 46 -> 40 (küçülttük) */
-  --h2-max:26px;
-  --h3-max:19px;
+/* Kart yapısı */
+.card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
-h1{ font-size: clamp(26px, 3.0vw, var(--h1-max)); letter-spacing:-0.015em }
-h2{ font-size: clamp(18px, 2.0vw, var(--h2-max)); letter-spacing:-0.01em }
-h3{ font-size: clamp(15px, 1.5vw, var(--h3-max)) }
-.card p{ font-size:.97em }
-.tags span{ font-size:.84rem }
+.card h3 {
+  margin-top: 0;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
-@media (max-width: 680px){
-  body{ font-size: 15.5px }
-  h1{ font-size: 26px }
-  .subtitle{ font-size: 14.5px }
+/* Etiketler */
+.tags {
+  margin-top: 1rem;
+}
+.tags span {
+  display: inline-block;
+  background-color: var(--tag-bg);
+  color: var(--muted-text);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  margin-right: 0.4rem;
+  font-size: 0.85rem;
+}
+
+/* Butonlar */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+.btn.primary {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+.btn.primary:hover {
+  background-color: #399fd6;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--card-bg);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  margin-top: 2rem;
 }

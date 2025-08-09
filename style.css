@@ -219,3 +219,26 @@ p {
     margin-left: 12px;
   }
 }
+/* ---------- Brand clickable ---------- */
+.brand a {
+  display: inline-block;
+  font-weight: 800;
+  font-size: 1.25rem;
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration: none;
+  transition: opacity var(--trans), transform var(--trans);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.brand a:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.brand a:active {
+  transform: scale(0.98);
+}

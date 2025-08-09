@@ -6,12 +6,19 @@
   <title>Onur Çelebi — Economist and AI & Econometrics</title>
   <meta name="description" content="Economist and AI & Econometrics. Personal site and contact." />
   <link rel="canonical" href="https://onurcelebi96.github.io/" />
+
+  <!-- Icons -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/og.png" />
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20250809-8" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css?v=20250809-10" />
 </head>
 <body>
+  <!-- Nav -->
   <nav class="nav">
     <div class="container nav-inner">
       <div class="brand"><a href="index.html">Onur Çelebi</a></div>
@@ -22,12 +29,14 @@
     </div>
   </nav>
 
+  <!-- Hero -->
   <section class="hero container">
-    <h1>Economist and AI &amp; Econometrics</h1>
+    <h1>Economist and AI &amp; Econometrics — Scientist &amp; PhD Candidate | Bridging Economics and Technology</h1>
     <p class="lead">Causal inference, ML for economics, energy markets. PhD — Ankara University.</p>
   </section>
 
   <main>
+    <!-- About -->
     <section class="container card">
       <p>
         I am an economist pursuing a PhD in Economics with both domestic and international academic and professional experience.
@@ -42,6 +51,7 @@
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="container card">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:celebionur@protonmail.ch">celebionur@protonmail.ch</a></p>
@@ -56,14 +66,15 @@
   </footer>
 
   <script>
-    // Smooth scroll when already on homepage
+    // Contact link: on homepage smooth-scroll, from other pages redirect to #contact then scroll
     (function () {
-      const isHome = location.pathname.endsWith('index.html') || location.pathname === '/' || location.pathname === '';
+      const isHome =
+        location.pathname.endsWith('index.html') ||
+        location.pathname === '/' || location.pathname === '';
       const contactLink = document.getElementById('contact-link');
 
       if (isHome && contactLink) {
         contactLink.addEventListener('click', function (e) {
-          // prevent full reload and scroll smoothly to #contact
           e.preventDefault();
           const el = document.getElementById('contact');
           if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -71,7 +82,6 @@
         });
       }
 
-      // If we arrived with #contact in URL (e.g., from projects.html), ensure smooth scroll after load
       if (location.hash === '#contact') {
         const to = document.getElementById('contact');
         if (to) setTimeout(() => to.scrollIntoView({ behavior: 'smooth' }), 0);

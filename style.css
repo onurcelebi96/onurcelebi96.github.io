@@ -24,8 +24,8 @@ html,body{margin:0}
 html{scroll-behavior:smooth}
 body{
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: clamp(15.5px, 1.0vw, 17px);   /* bir tık küçültüldü */
+  line-height: 1.68;
   letter-spacing: .14px;
   background: var(--bg);
   color: var(--text);
@@ -39,7 +39,7 @@ a:hover{color:var(--brand-violet)}
 
 h1,h2,h3{
   margin:0 0 .55rem;
-  line-height:1.22;
+  line-height:1.2;
   letter-spacing:-.01em;
   color:#f7f9ff;
   font-family:"Space Grotesk", Inter, sans-serif;
@@ -64,7 +64,7 @@ p{margin:.5rem 0 1.1rem}
   display:inline-block;
   font-family:"Space Grotesk", Inter, sans-serif;
   font-weight:800;
-  font-size:clamp(28px,3vw,36px);
+  font-size:clamp(26px,2.4vw,34px);  /* hafif küçültüldü */
   line-height:1;
   letter-spacing:.2px;
   background:linear-gradient(90deg,var(--brand-cyan) 0%, var(--brand-mid) 48%, var(--brand-violet) 100%);
@@ -85,16 +85,25 @@ p{margin:.5rem 0 1.1rem}
 
 /* ---------- Hero ---------- */
 .hero{
-  padding:84px 0 36px;
+  padding:78px 0 32px; /* biraz sıkılaştı */
   background:
     radial-gradient(1100px 420px at 14% -12%, rgba(143,227,255,.18), transparent 58%),
     radial-gradient(1100px 420px at 86% -12%, rgba(195,155,255,.16), transparent 58%);
 }
-.hero h1{margin-bottom:10px}
+.hero h1{
+  margin-bottom:6px;
+  font-size: clamp(26px, 3.0vw, 40px); /* başlık küçültüldü */
+}
+.subtitle{                 /* ikinci satır için (Scientist & PhD...) */
+  margin-top:-2px;
+  font-size: clamp(14px, 1.2vw, 18px);
+  font-weight:500;
+  color: var(--muted);
+}
 .lead{
   color:var(--muted);
-  max-width:680px;
-  font-size:16px;
+  max-width:700px;
+  font-size:clamp(15px,1.0vw,17px);
 }
 
 /* ---------- Cards & Grid ---------- */
@@ -125,7 +134,7 @@ p{margin:.5rem 0 1.1rem}
 .btn{
   display:inline-block; padding:10px 16px; border-radius:12px;
   border:1px solid var(--border); background:var(--panel); color:var(--text);
-  box-shadow:var(--shadow); font-weight:650; font-size:.95rem;
+  box-shadow:var(--shadow); font-weight:650; font-size:.93rem; /* 0.95 -> 0.93 */
   transition:transform var(--trans), opacity var(--trans), box-shadow var(--trans);
 }
 .btn:hover{transform:translateY(-1px);opacity:.96}
@@ -134,7 +143,7 @@ p{margin:.5rem 0 1.1rem}
 
 /* ---------- Footer ---------- */
 .footer{border-top:1px solid var(--border);margin-top:28px;color:var(--muted)}
-.footer .container{padding:24px 20px;text-align:center;font-size:.95rem}
+.footer .container{padding:24px 20px;text-align:center;font-size:.93rem}
 
 /* ---------- Anchor comfort ---------- */
 #contact{scroll-margin-top:84px}
@@ -146,64 +155,27 @@ p{margin:.5rem 0 1.1rem}
 /* ---------- Responsive tweaks ---------- */
 @media (max-width:860px){
   .nav a{margin-left:14px}
-  .hero{padding:64px 0 26px}
+  .hero{padding:64px 0 24px}
 }
 @media (max-width:520px){
   .btn{width:100%;text-align:center;margin:8px 0}
   .container{padding:0 16px}
 }
 
-/* === Typography tuning (drop-in override) === */
+/* === Fine typography balance === */
 :root{
-  --h1-max:46px;   /* 44–50 arası ayarlanabilir */
-  --h2-max:28px;
-  --h3-max:20px;
+  --h1-max:40px;  /* 46 -> 40 (küçülttük) */
+  --h2-max:26px;
+  --h3-max:19px;
 }
+h1{ font-size: clamp(26px, 3.0vw, var(--h1-max)); letter-spacing:-0.015em }
+h2{ font-size: clamp(18px, 2.0vw, var(--h2-max)); letter-spacing:-0.01em }
+h3{ font-size: clamp(15px, 1.5vw, var(--h3-max)) }
+.card p{ font-size:.97em }
+.tags span{ font-size:.84rem }
 
-/* gövde metni biraz büyüt + satır aralığı */
-body{
-  font-size: clamp(16px, 1.05vw, 17.5px);
-  line-height: 1.7;
-  letter-spacing: .15px;
-}
-
-/* başlıklar: daha dengeli ölçek + sıkı kerning */
-h1{
-  font-size: clamp(28px, 3.3vw, var(--h1-max));
-  font-weight: 700;
-  letter-spacing: -0.015em;
-}
-h2{
-  font-size: clamp(19px, 2.1vw, var(--h2-max));
-  letter-spacing: -0.01em;
-}
-h3{
-  font-size: clamp(16px, 1.6vw, var(--h3-max));
-}
-
-/* marka: gradient kalsın, boyut sakin */
-.brand a{
-  font-weight: 800;
-  font-size: clamp(26px, 2.3vw, 34px);
-  line-height: 1;
-}
-
-/* lead: dar sütun + net punto */
-.lead{
-  max-width: 720px;
-  font-size: clamp(15.5px, 1.05vw, 18px);
-  color: var(--muted);
-}
-
-/* kart içi yazılar çok büyük görünmesin */
-.card p{ font-size: .98em }
-
-/* etiketler hafif büyüsün */
-.tags span{ font-size: .85rem }
-
-/* mobil ince ayar */
 @media (max-width: 680px){
-  body{ font-size: 16px }
-  h1{ font-size: 28px }   /* uzun başlıklarda kırpma olmaz */
-  .lead{ font-size: 15.5px }
+  body{ font-size: 15.5px }
+  h1{ font-size: 26px }
+  .subtitle{ font-size: 14.5px }
 }

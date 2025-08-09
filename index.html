@@ -1,65 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Onur Çelebi</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onur Çelebi — Economist and AI & Econometrics</title>
+  <meta name="description" content="Economist and AI & Econometrics. Personal site and contact." />
+  <link rel="canonical" href="https://onurcelebi96.github.io/" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/og.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20250809-8" />
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">Onur Çelebi</a></h1>
-        <nav>
-            <ul>
-                <li><a href="projects.html">Projects & Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><a href="index.html">Onur Çelebi</a></div>
+      <div>
+        <a href="projects.html">Projects &amp; Skills</a>
+        <a href="index.html#contact" id="contact-link">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- About Section -->
-    <section class="about">
-        <h2>About</h2>
-        <p>
-            I am an economist pursuing a PhD in Economics with both domestic and international academic and professional experience.
-            My research focuses on econometric modeling, financial markets, data analytics, and AI-driven solution strategies.
-            I continuously enhance my skills in coding and computer programming, including advanced optimization techniques,
-            and approach every project with an open and innovative mindset. I personally coded and designed every part of this
-            website, combining technical precision with a creative touch.
-        </p>
-        <div class="tags">
-            <span>Econometrics</span>
-            <span>AI Solutions</span>
-            <span>Finance</span>
-            <span>Data Science</span>
-            <span>Python</span>
-            <span>Bytecode</span>
-        </div>
+  <section class="hero container">
+    <h1>Economist and AI &amp; Econometrics</h1>
+    <p class="lead">Causal inference, ML for economics, energy markets. PhD — Ankara University.</p>
+  </section>
+
+  <main>
+    <section class="container card">
+      <p>
+        I am an economist pursuing a PhD in Economics with both domestic and international academic and professional experience.
+        My research focuses on econometric modeling, financial markets, data analytics, and AI-driven solution strategies.
+        I continuously enhance my skills in coding and computer programming, including advanced optimization techniques,
+        and approach every project with an open and innovative mindset. I personally coded and designed every part of this website,
+        combining technical precision with a creative touch of vibecoding.
+      </p>
+      <div class="tags">
+        <span>Econometrics</span><span>AI Solutions</span><span>Finance</span>
+        <span>Data Science</span><span>Python</span><span>Bytecode</span>
+      </div>
     </section>
 
-    <!-- Technical Skills Section -->
-    <section class="technical-skills">
-        <h2>Technical Skills</h2>
-        <p>
-            <strong>Programming:</strong> Python (Pandas, NumPy, Statsmodels, Scikit-learn, Matplotlib, Seaborn, TensorFlow),
-            SQL, VBA<br>
-            <strong>Platforms:</strong> Bloomberg Terminal, Tableau, Excel (Advanced), SAP, Power BI<br>
-            <strong>Analysis:</strong> Time-Series Modeling, Forecasting, Scenario Analysis, Econometric Modeling, Machine Learning Integration<br>
-            <strong>Frameworks:</strong> Basel III, IFRS, ECB Guidelines, Risk Management Standards<br>
-            <strong>Specialized:</strong> Risk Modeling, Portfolio Optimization, Market Intelligence, AI-Driven Analytics, Financial Data Engineering
-        </p>
+    <section id="contact" class="container card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:celebionur@protonmail.ch">celebionur@protonmail.ch</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/onurcelebi96/" target="_blank" rel="noopener">linkedin.com/in/onurcelebi96</a></p>
+      <p>GitHub: <a href="https://github.com/onurcelebi96" target="_blank" rel="noopener">github.com/onurcelebi96</a></p>
+      <p>X: <a href="https://x.com/onr_clb" target="_blank" rel="me noopener">@onr_clb</a></p>
     </section>
+  </main>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:celebionur@protonmail.ch">celebionur@protonmail.ch</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/onurcelebi96/" target="_blank">linkedin.com/in/onurcelebi96</a></p>
-        <p>GitHub: <a href="https://github.com/onurcelebi96" target="_blank">github.com/onurcelebi96</a></p>
-    </section>
+  <footer class="footer">
+    <div class="container"><p>© <span id="y"></span> Onur Çelebi. All rights reserved.</p></div>
+  </footer>
 
-    <footer>
-        <p>© 2025 Onur Çelebi</p>
-    </footer>
+  <script>
+    // Smooth scroll when already on homepage
+    (function () {
+      const isHome = location.pathname.endsWith('index.html') || location.pathname === '/' || location.pathname === '';
+      const contactLink = document.getElementById('contact-link');
+
+      if (isHome && contactLink) {
+        contactLink.addEventListener('click', function (e) {
+          // prevent full reload and scroll smoothly to #contact
+          e.preventDefault();
+          const el = document.getElementById('contact');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+          history.replaceState(null, '', 'index.html#contact');
+        });
+      }
+
+      // If we arrived with #contact in URL (e.g., from projects.html), ensure smooth scroll after load
+      if (location.hash === '#contact') {
+        const to = document.getElementById('contact');
+        if (to) setTimeout(() => to.scrollIntoView({ behavior: 'smooth' }), 0);
+      }
+
+      document.getElementById('y').textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>

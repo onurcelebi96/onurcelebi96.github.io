@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/og.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20250809-6" />
+  <link rel="stylesheet" href="style.css?v=20250809-8" />
 </head>
 <body>
   <nav class="nav">
@@ -16,7 +16,7 @@
       <div class="brand"><a href="index.html">Onur Çelebi</a></div>
       <div>
         <a href="projects.html" class="active">Projects &amp; Skills</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact" id="contact-link">Contact</a>
       </div>
     </div>
   </nav>
@@ -29,7 +29,6 @@
   <main>
     <section class="container card">
       <div class="grid">
-        <!-- Project 1 -->
         <article class="card">
           <h3>Accurate Conditional Variance Models for Predicting Asymmetric Volatility in Cryptocurrency Markets</h3>
           <p>Applied GARCH models to improve the accuracy of volatility forecasting in cryptocurrency markets.</p>
@@ -37,14 +36,12 @@
           <div class="tags"><span>GARCH</span><span>Volatility</span><span>Crypto</span></div>
         </article>
 
-        <!-- Project 2 -->
         <article class="card">
           <h3>Application of Conditional Variance Models and Causality Analysis in Cryptocurrency Markets</h3>
           <p>Econometric application exploring volatility modeling and causality relationships in cryptocurrency markets.</p>
           <div class="tags"><span>GARCH</span><span>Causality</span><span>Crypto</span></div>
         </article>
 
-        <!-- Skills -->
         <article class="card">
           <h3>Technical Skills</h3>
           <p>
@@ -62,6 +59,10 @@
   <footer class="footer">
     <div class="container"><p>© <span id="y"></span> Onur Çelebi</p></div>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // On this page we KEEP href="index.html#contact" so it redirects to homepage and the homepage script smooth-scrolls.
+  </script>
 </body>
 </html>

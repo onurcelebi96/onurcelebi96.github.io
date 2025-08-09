@@ -3,38 +3,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects & Research — Onur Çelebi</title>
+  <title>Projects & Skills — Onur Çelebi</title>
+  <meta name="description" content="Projects and technical skills of Onur Çelebi." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/og.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20250809-4" />
+  <link rel="stylesheet" href="style.css?v=20250809-6" />
 </head>
 <body>
   <nav class="nav">
     <div class="container nav-inner">
       <div class="brand"><a href="index.html">Onur Çelebi</a></div>
       <div>
-        <a href="about.html">About</a>
-        <a href="skills.html">Technical Skills</a>
-        <a href="projects.html">Projects & Research</a>
-        <a href="contact.html">Contact</a>
+        <a href="projects.html" class="active">Projects &amp; Skills</a>
+        <a href="index.html#contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <main class="container">
-    <section class="card">
-      <h2>Projects & Research</h2>
+  <section class="hero container">
+    <h1>Projects &amp; Skills</h1>
+    <p class="lead">Selected work and core technical capabilities.</p>
+  </section>
+
+  <main>
+    <section class="container card">
       <div class="grid">
+        <!-- Project 1 -->
         <article class="card">
           <h3>Accurate Conditional Variance Models for Predicting Asymmetric Volatility in Cryptocurrency Markets</h3>
           <p>Applied GARCH models to improve the accuracy of volatility forecasting in cryptocurrency markets.</p>
-          <a class="btn" href="https://dergipark.org.tr/en/download/article-file/3716902" target="_blank" rel="noopener">Read Paper</a>
+          <a class="btn primary" href="https://dergipark.org.tr/en/download/article-file/3716902" target="_blank" rel="noopener">Read Paper</a>
+          <div class="tags"><span>GARCH</span><span>Volatility</span><span>Crypto</span></div>
         </article>
 
+        <!-- Project 2 -->
         <article class="card">
           <h3>Application of Conditional Variance Models and Causality Analysis in Cryptocurrency Markets</h3>
           <p>Econometric application exploring volatility modeling and causality relationships in cryptocurrency markets.</p>
+          <div class="tags"><span>GARCH</span><span>Causality</span><span>Crypto</span></div>
+        </article>
+
+        <!-- Skills -->
+        <article class="card">
+          <h3>Technical Skills</h3>
+          <p>
+            <strong>Programming:</strong> Python (Pandas, Statsmodels), SQL, VBA<br/>
+            <strong>Platforms:</strong> Bloomberg Terminal, Tableau, Excel (Advanced), SAP<br/>
+            <strong>Analysis:</strong> Time-Series Modeling, Forecasting, Scenario Analysis<br/>
+            <strong>Frameworks:</strong> Basel III, IFRS, ECB Guidelines<br/>
+            <strong>Specialized:</strong> Risk Modeling, Portfolio Analysis, Market Intelligence, AI-Driven Analytics
+          </p>
         </article>
       </div>
     </section>

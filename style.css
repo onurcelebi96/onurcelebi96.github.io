@@ -1,4 +1,5 @@
-/* ---------- Tokens (slightly lighter dark + gemini gradient) ---------- */
+```css
+/* ---------- Tokens (lightened dark + Gemini-like gradient) ---------- */
 :root{
   --bg:#0e1117;
   --panel:#171b23;
@@ -7,11 +8,9 @@
   --text:#eef3fb;
   --muted:#b5bbca;
 
-  --brand-cyan:#8fe3ff;   /* pastel cyan */
-  --brand-mid:#a6b8ff;    /* soft blue */
-  --brand-violet:#c39bff; /* lavender */
-  --brand:#7dd3fc;
-  --brand-2:#c084fc;
+  --brand-cyan:#8fe3ff;    /* pastel cyan */
+  --brand-mid:#a6b8ff;     /* soft blue */
+  --brand-violet:#c39bff;  /* lavender */
 
   --shadow:0 12px 32px rgba(0,0,0,.38);
   --radius:16px;
@@ -35,8 +34,8 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 img{max-width:100%;display:block}
-a{color:var(--brand);text-decoration:none;transition:color var(--trans), opacity var(--trans)}
-a:hover{color:var(--brand-2)}
+a{color:var(--brand-cyan);text-decoration:none;transition:color var(--trans), opacity var(--trans)}
+a:hover{color:var(--brand-violet)}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
 
 h1,h2,h3{
@@ -60,14 +59,13 @@ p{margin:.5rem 0 1.1rem}
   border-bottom:1px solid var(--border);
   box-shadow:0 6px 20px rgba(0,0,0,.35);
 }
-.nav-inner{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
-
-/* Brand — Gemini-like gradient title */
+.nav-inner{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}
 .brand a{
   display:inline-block;
   font-family:"Space Grotesk", Inter, sans-serif;
   font-weight:800;
   font-size:clamp(28px,3vw,36px);
+  line-height:1;
   letter-spacing:.2px;
   background:linear-gradient(90deg,var(--brand-cyan) 0%, var(--brand-mid) 48%, var(--brand-violet) 100%);
   -webkit-background-clip:text; background-clip:text; color:transparent;
@@ -76,7 +74,6 @@ p{margin:.5rem 0 1.1rem}
   transition:transform var(--trans), filter var(--trans), opacity var(--trans);
 }
 .brand a:hover{transform:translateY(-1px); filter:saturate(115%); opacity:.97}
-
 .nav a{margin-left:18px;color:#e5e9f3;opacity:.9;font-weight:500}
 .nav a:hover{opacity:1}
 .nav a.active{position:relative;opacity:1 !important;color:#fff}
@@ -87,12 +84,17 @@ p{margin:.5rem 0 1.1rem}
 
 /* ---------- Hero ---------- */
 .hero{
-  padding:64px 0 28px;
+  padding:84px 0 36px;
   background:
-    radial-gradient(1100px 380px at 10% -10%,rgba(143,227,255,.18),transparent 55%),
-    radial-gradient(1100px 380px at 90% -10%,rgba(195,155,255,.16),transparent 55%);
+    radial-gradient(1100px 420px at 14% -12%, rgba(143,227,255,.18), transparent 58%),
+    radial-gradient(1100px 420px at 86% -12%, rgba(195,155,255,.16), transparent 58%);
 }
-.lead{color:var(--muted);max-width:760px;font-size:clamp(15px,1.05vw,18px)}
+.hero h1{margin-bottom:10px}
+.lead{
+  color:var(--muted);
+  max-width:680px;          /* daha dar satır uzunluğu */
+  font-size:clamp(15px,1.05vw,18px);
+}
 
 /* ---------- Cards & Grid ---------- */
 .card{
@@ -142,9 +144,10 @@ p{margin:.5rem 0 1.1rem}
 /* ---------- Responsive tweaks ---------- */
 @media (max-width:860px){
   .nav a{margin-left:14px}
-  .hero{padding:48px 0 22px}
+  .hero{padding:64px 0 26px}
 }
 @media (max-width:520px){
   .btn{width:100%;text-align:center;margin:8px 0}
   .container{padding:0 16px}
 }
+```

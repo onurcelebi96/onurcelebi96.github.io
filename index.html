@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +11,10 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/og.png" />
 
-  <!-- Fonts -->
+  <!-- Fonts (önceki beğendiğin başlık görünümü korunur) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 
-  <!-- Styles -->
+  <!-- Styles (mevcut style.css’ini kullan) -->
   <link rel="stylesheet" href="style.css?v=20250809-9" />
 
   <!-- Open Graph -->
@@ -45,7 +44,7 @@
   </section>
 
   <main>
-    <!-- About (no heading) -->
+    <!-- About (başlık yok, metin üstte) -->
     <section class="container card">
       <p>
         I am an economist pursuing a PhD in Economics with both domestic and international academic and professional experience.
@@ -75,9 +74,11 @@
   </footer>
 
   <script>
-    // Smooth scroll on homepage; redirect behavior works naturally from other pages via href=index.html#contact
+    // Contact link davranışı: home'da smooth scroll, diğer sayfada index#contact
     (function () {
-      const isHome = location.pathname.endsWith('index.html') || location.pathname === '/' || location.pathname === '';
+      const isHome =
+        location.pathname.endsWith('index.html') ||
+        location.pathname === '/' || location.pathname === '';
       const contactLink = document.getElementById('contact-link');
 
       if (isHome && contactLink) {
@@ -88,13 +89,15 @@
           history.replaceState(null, '', 'index.html#contact');
         });
       }
+
+      // projects.html'den geldiyse #contact hash'i ile yumuşak kaydır
       if (location.hash === '#contact') {
         const to = document.getElementById('contact');
         if (to) setTimeout(() => to.scrollIntoView({ behavior: 'smooth' }), 0);
       }
+
       document.getElementById('y').textContent = new Date().getFullYear();
     })();
   </script>
 </body>
 </html>
-```

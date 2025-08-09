@@ -13,7 +13,6 @@
   <!-- Icons -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="alternate icon" href="assets/favicon.svg">
-  <!-- iOS/Android home screen (opsiyonel, aynı görseli kullanırız) -->
   <link rel="apple-touch-icon" href="assets/og.png">
 
   <!-- Performance hints -->
@@ -43,9 +42,10 @@
     <div class="container nav-inner">
       <a class="brand" href="#" aria-label="Onur Çelebi anasayfa">Onur Çelebi</a>
       <nav aria-label="Birincil">
-        <a href="#about">Hakkımda</a>
-        <a href="#work">Çalışmalar</a>
-        <a href="#contact">İletişim</a>
+        <a href="#about">Hakkımda / About</a>
+        <a href="#skills">TECHNICAL SKILLS / Teknik Beceriler</a>
+        <a href="#projects">Projeler & Araştırmalar / Projects & Research</a>
+        <a href="#contact">İletişim / Contact</a>
       </nav>
     </div>
   </header>
@@ -56,50 +56,84 @@
         <h1>Economist · AI & Econometrics</h1>
         <p class="lead">Causal inference, ML for economics, enerji piyasaları. PhD — Ankara University.</p>
         <div class="cta">
-          <a class="btn primary" href="#work">Projeler</a>
-          <a class="btn" href="#contact">İletişim</a>
-          <!-- CV butonu -->
-          <a class="btn" href="assets/OnurCelebiCV.pdf" download aria-label="CV indir">CV (PDF)</a>
+          <a class="btn primary" href="#projects">Projects</a>
+          <a class="btn" href="#contact">Contact</a>
+          <!-- CV butonu kaldırıldı -->
         </div>
       </div>
     </div>
   </section>
 
   <main class="container" role="main">
+    <!-- Hakkımda / About -->
     <section id="about" class="card">
-      <h2>Hakkımda</h2>
-<p>Ekonomi doktorası yapan bir ekonomistim. Yurt içinde ve yurt dışında akademik ve profesyonel deneyimler edindim. Araştırmalarım; ekonometrik modelleme, finansal piyasalar, veri analitiği ve yapay zekâ temelli çözüm stratejilerine odaklanıyor. Kodlama, bilgisayar programlama ve özellikle bytecode düzeyinde optimizasyon gibi alanlarda sürekli olarak kendimi geliştirir, yenilikçi yöntemler üretmeye açık bir yaklaşım benimserim.</p>
-<ul class="tags">
-  <span>Econometrics</span><span>AI Solutions</span><span>Finance</span><span>Data Science</span><span>Python</span><span>Bytecode</span>
-</ul>
-
+      <h2>Hakkımda / About</h2>
+      <p>Ekonomi doktorası yapan bir ekonomistim. Yurt içinde ve yurt dışında akademik ve profesyonel deneyimler edindim. Araştırmalarım; ekonometrik modelleme, finansal piyasalar, veri analitiği ve yapay zekâ temelli çözüm stratejilerine odaklanıyor. Kodlama, bilgisayar programlama ve özellikle bytecode düzeyinde optimizasyon gibi alanlarda sürekli olarak kendimi geliştirir, yenilikçi yöntemler üretmeye açık bir yaklaşım benimserim.</p>
+      <ul class="tags">
+        <span>Econometrics</span><span>AI Solutions</span><span>Finance</span><span>Data Science</span><span>Python</span><span>Bytecode</span>
+      </ul>
     </section>
 
-    <section id="work" aria-labelledby="work-title">
-      <h2 id="work-title">Seçili Çalışmalar</h2>
+    <!-- TECHNICAL SKILLS / Teknik Beceriler -->
+    <section id="skills" class="card" aria-labelledby="skills-title">
+      <h2 id="skills-title">TECHNICAL SKILLS / Teknik Beceriler</h2>
+      <p>
+        <strong>Programming:</strong> Python (Pandas, Statsmodels), SQL, VBA |
+        <strong>Platforms:</strong> Bloomberg Terminal, Tableau, Excel (Advanced), SAP |
+        <strong>Analysis:</strong> Time-Series Modeling, Forecasting, Scenario Analysis |
+        <strong>Frameworks:</strong> Basel III, IFRS, ECB Guidelines |
+        <strong>Specialized:</strong> Risk Modeling, Portfolio Analysis, Market Intelligence, AI-Driven Analytics
+      </p>
+    </section>
+
+    <!-- Projeler & Araştırmalar / Projects & Research -->
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projeler & Araştırmalar / Projects & Research</h2>
       <div class="grid">
         <article class="card">
-          <h3>Enerji Piyasalarında Nedensellik</h3>
-          <p>Panel FE / DiD / DoubleML; elektrik fiyatları ve yenilenebilir entegrasyonu.</p>
-          <div class="tags"><span>Python</span><span>Stata</span><span>DoubleML</span></div>
+          <h3>AI-Finance Uygulamaları / AI-Finance Applications</h3>
+          <p>Merkez bankası metinlerinden gösterge çıkarımı; yatırımcı panellerine akış. LLM tabanlı finansal raporlama ve para politikası analizleri.</p>
+          <div class="tags"><span>Python</span><span>NLP</span><span>Finance</span></div>
         </article>
+
         <article class="card">
-          <h3>ENTRA — Göçmen Entegrasyonu</h3>
-          <p>İşgücü piyasası etkileri: diff-in-diff, event study, heterojenlik.</p>
-          <div class="tags"><span>DiD</span><span>Event Study</span></div>
+          <h3>ENTRA — Göçmen Entegrasyonu / Migrant Labour Integration</h3>
+          <p>İşgücü piyasası erişimi ve ilk iş istihdamı üzerinde etki analizi; DiD, event study, heterojenlik.</p>
+          <div class="tags"><span>Stata</span><span>Panel</span><span>Causal</span></div>
         </article>
+
         <article class="card">
-          <h3>Hidrojen İçin MCDM</h3>
-          <p>Çok ölçütlü karar verme ile üretim lokasyonu ve maliyet hassasiyeti.</p>
+          <h3>Hidrojen için MCDM / MCDM for Green Hydrogen</h3>
+          <p>Yenilenebilir kaynakların ekonomik uygulanabilirliği ve dış ticaret potansiyeli için çok ölçütlü karar verme.</p>
           <div class="tags"><span>MCDM</span><span>Energy</span></div>
+        </article>
+
+        <article class="card">
+          <h3>Makro-Finansal Volatilite / Macro-Financial Volatility</h3>
+          <p>VAR/GARCH ve iletim kanalları ile piyasa oynaklığının yatırım stratejilerine yansımaları.</p>
+          <div class="tags"><span>VAR</span><span>GARCH</span><span>Risk</span></div>
+        </article>
+
+        <article class="card">
+          <h3>Renault — Bütçe & Risk / Budget & Risk Strategy</h3>
+          <p>AB operasyonlarında çapraz-bölge finansal veri entegrasyonu ve bütçe tahmin doğruluğu iyileştirmeleri.</p>
+          <div class="tags"><span>Forecasting</span><span>Compliance</span></div>
+        </article>
+
+        <article class="card">
+          <h3>BNP Paribas — Kredi & Teminat / Credit & Assurance</h3>
+          <p>Basel III çerçevesinde kurumsal kredi değerlendirmeleri ve erken uyarı metodolojileri.</p>
+          <div class="tags"><span>Basel III</span><span>Credit Risk</span></div>
         </article>
       </div>
     </section>
 
+    <!-- İletişim / Contact -->
     <section id="contact" class="card">
-      <h2>İletişim</h2>
-      <p>E-posta: <a href="mailto:celebionur@protonmail.ch">celebionur@protonmail.ch</a></p>
+      <h2>İletişim / Contact</h2>
+      <p>E-posta / Email: <a href="mailto:celebionur@protonmail.ch">celebionur@protonmail.ch</a></p>
       <p>X: <a href="https://x.com/onr_clb" target="_blank" rel="me noopener">/@onr_clb</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/onurcelebi96/" target="_blank" rel="noopener">linkedin.com/in/onurcelebi96</a></p>
     </section>
   </main>
 
@@ -107,7 +141,7 @@
     <div class="container"><small>© <span id="y"></span> Onur Çelebi</small></div>
   </footer>
 
-  <!-- Structured Data (Organization) -->
+  <!-- Structured Data (Person) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -115,7 +149,7 @@
     "name":"Onur Çelebi",
     "url":"https://onurcelebi96.github.io/",
     "jobTitle":"Economist",
-    "sameAs":["https://x.com/onr_clb"],
+    "sameAs":["https://x.com/onr_clb","https://www.linkedin.com/in/onurcelebi96/"],
     "email":"mailto:celebionur@protonmail.ch"
   }
   </script>

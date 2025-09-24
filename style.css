@@ -121,12 +121,12 @@ p{margin:.5rem 0 1.1rem}
 
 .about-photo {
   flex-shrink: 0;
-  width: 90px;
+  width: 100px;
 }
 
 .profile-photo {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: var(--radius-sm);
   border: 2px solid var(--border);
@@ -188,12 +188,12 @@ p{margin:.5rem 0 1.1rem}
   
   .about-photo {
     order: -1;
-    width: 75px;
+    width: 85px;
   }
   
   .profile-photo {
-    width: 75px;
-    height: 75px;
+    width: 85px;
+    height: 85px;
   }
 }
 

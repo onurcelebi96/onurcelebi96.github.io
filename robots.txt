@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://onurcelebi96.github.io/sitemap.xml
+
+# Disallow crawling of certain files
+Disallow: /*.DS_Store
+Disallow: /.*
+
+# Allow crawling of assets
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+
+# Crawl delay (optional)
+Crawl-delay: 1

@@ -3,97 +3,385 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Onur Çelebi — Economist and AI & Econometrics</title>
-  <meta name="description" content="Economist and AI & Econometrics. Personal site and contact." />
+  <title>Onur Çelebi — Economist • AI & Econometrics Researcher</title>
+  <meta name="description" content="Onur Çelebi is an economist and PhD researcher specializing in econometrics, financial markets, AI-driven analytics, and data science. Based at Ankara University." />
+  <meta name="keywords" content="economics, econometrics, artificial intelligence, data science, financial markets, PhD researcher, Ankara University, GARCH models, cryptocurrency analysis" />
+  <meta name="author" content="Onur Çelebi" />
+  
+  <!-- Canonical URL -->
   <link rel="canonical" href="https://onurcelebi96.github.io/" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://onurcelebi96.github.io/" />
+  <meta property="og:title" content="Onur Çelebi — Economist • AI & Econometrics Researcher" />
+  <meta property="og:description" content="Economist and PhD researcher specializing in econometrics, financial markets, and AI-driven analytics." />
+  <meta property="og:image" content="https://onurcelebi96.github.io/linkedn.png" />
+  <meta property="og:site_name" content="Onur Çelebi" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://onurcelebi96.github.io/" />
+  <meta name="twitter:title" content="Onur Çelebi — Economist • AI & Econometrics Researcher" />
+  <meta name="twitter:description" content="Economist and PhD researcher specializing in econometrics, financial markets, and AI-driven analytics." />
+  <meta name="twitter:image" content="https://onurcelebi96.github.io/linkedn.png" />
+  <meta name="twitter:creator" content="@onr_clb" />
 
   <!-- Icons -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/og.png" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="style.css?v=20250809-restore" />
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Onur Çelebi",
+    "jobTitle": "PhD Researcher in Economics",
+    "affiliation": {
+      "@type": "EducationalOrganization",
+      "name": "Ankara University"
+    },
+    "description": "Economist and researcher specializing in econometrics, financial markets, AI-driven analytics, and data science",
+    "url": "https://onurcelebi96.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/onurcelebi96/",
+      "https://github.com/onurcelebi96",
+      "https://x.com/onr_clb"
+    ],
+    "email": "celebionur@protonmail.ch",
+    "image": "https://onurcelebi96.github.io/linkedn.png",
+    "knowsAbout": [
+      "Econometrics",
+      "Artificial Intelligence",
+      "Financial Markets",
+      "Data Science",
+      "Python Programming",
+      "Time Series Analysis",
+      "GARCH Models",
+      "Cryptocurrency Analysis"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Ankara University"
+    }
+  }
+  </script>
+  
+  <!-- Analytics (Plausible) -->
+  <script defer data-domain="onurcelebi96.github.io" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
-  <!-- Nav -->
+  <!-- Skip to main content -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- Navigation -->
   <nav class="nav">
     <div class="container nav-inner">
       <div class="brand"><a href="index.html">Onur Çelebi</a></div>
-      <div>
-        <a href="projects.html">Projects &amp; Skills</a>
-        <a href="index.html#contact" id="contact-link">Contact</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="blog.html">Blog</a>
+        <a href="cv.html">CV</a>
+        <a href="#contact" id="contact-link">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <span id="theme-icon">🌙</span>
+        </button>
       </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="index.html" class="active">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="blog.html">Blog</a>
+      <a href="cv.html">CV</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero container">
-    <h1>Economist and AI &amp; Econometrics</h1>
-    <p class="subtitle">Scientist &amp; PhD at Ankara University</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Economist • AI &amp; Econometrics</h1>
+      <p class="lead">PhD Researcher at Ankara University specializing in econometric modeling, financial markets, and AI-driven analytics</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+        <a href="cv.html" class="btn btn-primary">Download CV</a>
+        <a href="publications.html" class="btn btn-secondary">View Publications</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
   </section>
 
-  <main>
-    <!-- About -->
-    <section class="container card">
-      <div class="about-content">
-        <div class="about-photo">
-          <img src="linkedn.png" alt="Onur Çelebi" class="profile-photo">
-        </div>
-        <div class="about-text">
-          <p>
-            I am an economist pursuing a PhD in Economics with both domestic and international academic and professional experience.
-            My research focuses on econometric modeling, financial markets, data analytics, and AI-driven solution strategies.
-            I continuously enhance my skills in coding and computer programming, including advanced optimization techniques,
-            and approach every project with an open and innovative mindset. I personally coded and designed every part of this website,
-            combining technical precision with a creative touch of vibecoding.
-          </p>
-          <div class="tags">
-            <span>Econometrics</span><span>AI Solutions</span><span>Finance</span>
-            <span>Data Science</span><span>Python</span><span>Bytecode</span>
+  <!-- Main Content -->
+  <main id="main">
+    <!-- About Section -->
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <div class="about-content">
+            <div class="about-photo">
+              <img src="linkedn.png" alt="Onur Çelebi" class="profile-photo">
+            </div>
+            <div class="about-text">
+              <h2>About Me</h2>
+              <p>
+                I am an economist pursuing a PhD in Economics with extensive domestic and international academic and professional experience.
+                My research focuses on econometric modeling, financial markets, data analytics, and AI-driven solution strategies.
+                I continuously enhance my skills in coding and computer programming, including advanced optimization techniques,
+                and approach every project with an open and innovative mindset.
+              </p>
+              <p>
+                My work bridges traditional economic theory with cutting-edge computational methods, combining technical precision 
+                with innovative research approaches in the evolving landscape of modern economics.
+              </p>
+              <div class="tags">
+                <span>Econometrics</span><span>AI Solutions</span><span>Financial Markets</span>
+                <span>Data Science</span><span>Python</span><span>Research</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="container card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:celebionur@protonmail.ch">celebionur@protonmail.ch</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/onurcelebi96/" target="_blank" rel="noopener">linkedin.com/in/onurcelebi96</a></p>
-      <p>GitHub: <a href="https://github.com/onurcelebi96" target="_blank" rel="noopener">github.com/onurcelebi96</a></p>
-      <p>X: <a href="https://x.com/onr_clb" target="_blank" rel="me noopener">@onr_clb</a></p>
+    <!-- Research Highlights -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Research Highlights</h2>
+          <p class="lead">Current focus areas and recent contributions</p>
+        </div>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>📊 Econometric Modeling</h3>
+            <p>Advanced time-series analysis, GARCH models, and volatility forecasting with applications to cryptocurrency and traditional financial markets.</p>
+            <div style="margin-top: 1.5rem;">
+              <a href="research.html#econometrics" class="btn btn-secondary">Learn More</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>🤖 AI & Machine Learning</h3>
+            <p>Integration of artificial intelligence techniques with economic analysis, including predictive modeling and automated decision systems.</p>
+            <div style="margin-top: 1.5rem;">
+              <a href="research.html#ai" class="btn btn-secondary">Explore Research</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Publications -->
+    <section class="section" style="background: var(--panel-2);">
+      <div class="container">
+        <div class="section-header">
+          <h2>Recent Publications</h2>
+          <p class="lead">Latest scholarly contributions</p>
+        </div>
+        <div class="card">
+          <h3 class="publication-title">Accurate Conditional Variance Models for Predicting Asymmetric Volatility in Cryptocurrency Markets</h3>
+          <p class="publication-authors"><strong>Çelebi, O.</strong></p>
+          <p class="publication-venue">Economics, Business and Organization Research, 2024</p>
+          <p>Applied GARCH models to improve the accuracy of volatility forecasting in cryptocurrency markets, demonstrating superior performance in asymmetric volatility prediction.</p>
+          <div class="publication-links">
+            <a href="https://dergipark.org.tr/en/download/article-file/3716902" class="btn btn-primary" target="_blank" rel="noopener">📄 Read Paper</a>
+            <span class="badge badge-success">Published</span>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="publications.html" class="btn btn-ghost">View All Publications</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get in Touch</h2>
+          <p class="lead">Let's discuss research opportunities and collaborations</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+              <div class="contact-icon">✉</div>
+              <div>
+                <strong>Email</strong><br>
+                <a href="mailto:celebionur@protonmail.ch">celebionur@protonmail.ch</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🏛</div>
+              <div>
+                <strong>Institution</strong><br>
+                Ankara University<br>
+                Department of Economics
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🌐</div>
+              <div>
+                <strong>Connect</strong><br>
+                <div class="social-links" style="justify-content: flex-start; margin-top: 0.5rem;">
+                  <a href="https://www.linkedin.com/in/onurcelebi96/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+                  <a href="https://github.com/onurcelebi96" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+                  <a href="https://x.com/onr_clb" class="social-link" target="_blank" rel="me noopener" aria-label="X (Twitter)">𝕏</a>
+                  <a href="https://scholar.google.com" class="social-link" target="_blank" rel="noopener" aria-label="Google Scholar">gs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Research Interests</h3>
+            <ul style="margin: 0; padding-left: 1.5rem; color: var(--muted);">
+              <li>Econometric modeling and time-series analysis</li>
+              <li>Financial market volatility and risk management</li>
+              <li>Artificial intelligence in economics</li>
+              <li>Cryptocurrency market dynamics</li>
+              <li>Data science and predictive analytics</li>
+              <li>Quantitative finance and portfolio optimization</li>
+            </ul>
+            <div style="margin-top: 1.5rem;">
+              <a href="research.html" class="btn btn-primary">Explore My Research</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- Enhanced Footer -->
   <footer class="footer">
-    <div class="container"><p>© <span id="y"></span> Onur Çelebi. All rights reserved.</p></div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Onur Çelebi</h4>
+          <p style="color: var(--muted); font-size: 0.875rem;">Economist and PhD researcher specializing in econometrics, financial markets, and AI-driven analytics.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/onurcelebi96/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="https://github.com/onurcelebi96" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+            <a href="https://x.com/onr_clb" class="social-link" target="_blank" rel="me noopener" aria-label="X (Twitter)">𝕏</a>
+            <a href="https://scholar.google.com" class="social-link" target="_blank" rel="noopener" aria-label="Google Scholar">gs</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Research</h4>
+          <ul class="footer-links">
+            <li><a href="research.html">Research Areas</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="teaching.html">Teaching</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Onur Çelebi. All rights reserved. Built with modern web standards.</p>
+      </div>
+    </div>
   </footer>
 
+  <!-- Enhanced Scripts -->
   <script>
-    // Contact: home'da smooth scroll; diğer sayfadan gelince #contact
-    (function () {
-      const isHome =
-        location.pathname.endsWith('index.html') ||
-        location.pathname === '/' || location.pathname === '';
-      const contactLink = document.getElementById('contact-link');
-
-      if (isHome && contactLink) {
-        contactLink.addEventListener('click', function (e) {
-          e.preventDefault();
-          const el = document.getElementById('contact');
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-          history.replaceState(null, '', 'index.html#contact');
+    // Set current year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+    
+    // Check for saved theme preference or default to dark (current aesthetic)
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    body.setAttribute('data-theme', currentTheme);
+    themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    
+    themeToggle.addEventListener('click', () => {
+      const newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    });
+    
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMobile = document.getElementById('nav-mobile');
+    
+    navToggle.addEventListener('click', () => {
+      navMobile.classList.toggle('show');
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          // Close mobile nav if open
+          navMobile.classList.remove('show');
+        }
+      });
+    });
+    
+    // Intersection Observer for animations
+    if ('IntersectionObserver' in window) {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
         });
-      }
-      if (location.hash === '#contact') {
-        const to = document.getElementById('contact');
-        if (to) setTimeout(() => to.scrollIntoView({ behavior: 'smooth' }), 0);
-      }
-      document.getElementById('y').textContent = new Date().getFullYear();
-    })();
+      }, observerOptions);
+      
+      // Observe all cards for animations
+      document.querySelectorAll('.card').forEach(card => {
+        card.classList.add('fade-in');
+        observer.observe(card);
+      });
+    }
+    
+    // Preload important pages
+    const importantPages = ['research.html', 'publications.html', 'cv.html'];
+    importantPages.forEach(page => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = page;
+      document.head.appendChild(link);
+    });
   </script>
 </body>
 </html>

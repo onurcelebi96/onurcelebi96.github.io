@@ -490,20 +490,48 @@
     // Set current year
     document.getElementById('current-year').textContent = new Date().getFullYear();
     
-    // Theme toggle functionality
+    // Enhanced Theme toggle functionality
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
     const body = document.body;
     
+    // Check for saved theme preference or default to dark (current aesthetic)
     const currentTheme = localStorage.getItem('theme') || 'dark';
     body.setAttribute('data-theme', currentTheme);
-    themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    
+    // Set initial icon with animation
+    function updateThemeIcon(theme, animate = false) {
+      const isDark = theme === 'dark';
+      themeIcon.textContent = isDark ? '☀️' : '🌙';
+      
+      if (animate) {
+        themeIcon.style.transform = 'rotate(180deg) scale(0.8)';
+        setTimeout(() => {
+          themeIcon.style.transform = 'rotate(0deg) scale(1)';
+        }, 150);
+      }
+    }
+    
+    updateThemeIcon(currentTheme);
     
     themeToggle.addEventListener('click', () => {
       const newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      
+      // Add loading state
+      themeToggle.style.pointerEvents = 'none';
+      
+      // Smooth transition with animation
+      body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
       body.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+      
+      updateThemeIcon(newTheme, true);
+      
+      // Re-enable button after animation
+      setTimeout(() => {
+        themeToggle.style.pointerEvents = 'auto';
+        body.style.transition = '';
+      }, 300);
     });
     
     // Mobile navigation

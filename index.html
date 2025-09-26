@@ -265,12 +265,8 @@
         <!-- CV Request Card -->
         <div class="card" style="margin-top: 2rem;">
           <h3>Request My CV</h3>
-          <p class="lead" style="margin-top:.25rem; margin-bottom:1rem;">Share your email, and I'll send you my latest CV.</p>
-          <form id="cv-request-form" style="display:flex; gap:.75rem; flex-wrap:wrap; align-items:center;">
-            <input type="email" id="cv-request-email" name="email" placeholder="Your email address" required aria-label="Your email address" style="flex:1; min-width:220px; padding:10px 12px; border-radius:10px; border:1px solid var(--border); background:var(--panel); color:var(--text);">
-            <button type="submit" class="btn btn-primary">Email Me for CV</button>
-          </form>
-          <div id="cv-request-hint" style="color:var(--muted); font-size:.9rem; margin-top:.5rem;">This opens your email app with a pre-filled request.</div>
+          <p class="lead" style="margin-top:.25rem; margin-bottom:1rem;">Click below to open your mail app with a pre‑filled request.</p>
+          <a class="btn btn-primary" href="mailto:celebionur@protonmail.ch?subject=CV%20Request&body=Hello%20Onur,%0A%0AI%20would%20like%20to%20request%20your%20latest%20CV.%0A%0AThank%20you." aria-label="Email me for CV">Email Me for CV</a>
         </div>
       </div>
     </section>
@@ -421,19 +417,7 @@
       document.head.appendChild(link);
     });
 
-    // CV Request form → open prefilled email
-    const cvForm = document.getElementById('cv-request-form');
-    const cvEmail = document.getElementById('cv-request-email');
-    if (cvForm && cvEmail) {
-      cvForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const visitorEmail = cvEmail.value.trim();
-        if (!visitorEmail) return;
-        const subject = encodeURIComponent('CV Request');
-        const body = encodeURIComponent(`Hello Onur,\n\nI would like to request your latest CV.\n\nMy email: ${visitorEmail}\n\nThank you.`);
-        window.location.href = `mailto:celebionur@protonmail.ch?subject=${subject}&body=${body}`;
-      });
-    }
+    // Direct CV request handled via mailto link in markup
   </script>
 </body>
 </html>

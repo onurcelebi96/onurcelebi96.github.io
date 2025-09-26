@@ -603,8 +603,8 @@ p{margin:.5rem 0 1.1rem}
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 1rem;
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -631,9 +631,15 @@ p{margin:.5rem 0 1.1rem}
 }
 
 #theme-icon {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
+}
+
+#theme-icon svg{
+  width:12px;
+  height:12px;
+  display:block;
 }
 
 .theme-toggle:hover #theme-icon {

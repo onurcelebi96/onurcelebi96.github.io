@@ -602,9 +602,9 @@ p{margin:.5rem 0 1.1rem}
 .theme-toggle {
   background: var(--panel);
   border: 1px solid var(--border);
-  border-radius: 1.25rem;
-  width: 2.25rem;
-  height: 2.25rem;
+  border-radius: 1rem;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -637,7 +637,7 @@ p{margin:.5rem 0 1.1rem}
 }
 
 .theme-toggle:hover #theme-icon {
-  transform: rotate(180deg) scale(1.1);
+  transform: rotate(180deg);
 }
 
 /* Enhanced theme toggle with sliding background */
